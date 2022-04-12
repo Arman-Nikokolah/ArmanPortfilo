@@ -5,11 +5,11 @@ import FeqSection from "../components/FeqSection";
 
 const AboutUs = () => {
   return (
-    <>
+    <div>
       <AboutSection />
       <ServicesSection />
       <FeqSection />
-    </>
+    </div>
   );
 };
 
