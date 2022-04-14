@@ -26,7 +26,7 @@ const ServicesSection = () => {
           <Card>
             <div className="icon">
               <img src={mony} alt="clock" />
-              <h3>Efficient</h3>
+              <h3>Mony</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
@@ -34,7 +34,7 @@ const ServicesSection = () => {
           <Card>
             <div className="icon">
               <img src={diaphragm} alt="clock" />
-              <h3>Efficient</h3>
+              <h3>Diaphragm</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
@@ -42,7 +42,7 @@ const ServicesSection = () => {
           <Card>
             <div className="icon">
               <img src={teamwork} alt="clock" />
-              <h3>Efficient</h3>
+              <h3>Teamwork</h3>
             </div>
             <p>Lorem ipsum dolor sit amet.</p>
           </Card>
