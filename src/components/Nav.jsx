@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
+import { NavAnimations } from "../Animate";
 const Nav = () => {
   return (
-    <div>
+    <motion.div variants={NavAnimations} initial="hidden" animate="show">
       <StyleDNav>
         <h1>
           <Link to="/" className="logo">
@@ -26,7 +27,7 @@ const Nav = () => {
           </li>
         </ul>
       </StyleDNav>
-    </div>
+    </motion.div>
   );
 };
 

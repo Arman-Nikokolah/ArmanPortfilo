@@ -1,35 +1,39 @@
 import React from "react";
 import home1 from "../img/home1.png";
-// import styled from "styled-components";
-
+import { motion } from "framer-motion";
 import { About, Description, Image, Hide } from "../styles";
-
+import { Tag, Tagp, ImageTag } from "../Animate";
+import Wave from "./Wave";
+import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <About>
       <Description>
-        <div className="title">
+        <motion.div className="title">
           <Hide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={Tag}>We work to make</motion.h2>
           </Hide>
           <Hide>
-            <h2>
+            <motion.h2 variants={Tag}>
               your <span>dreams </span>come
-            </h2>
+            </motion.h2>
           </Hide>
           <Hide>
-            <h2>true.</h2>
+            <motion.h2 variants={Tag}>true.</motion.h2>
           </Hide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={Tagp}>
           Contact us for any photography or vediography ideas that you have. We
           have professionals with amazing skills.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <Link to="/contactus">
+          <motion.button variants={Tagp}>Contact Us</motion.button>
+        </Link>
       </Description>
       <Image>
-        <img src={home1} alt="gay with has camera" />
+        <motion.img variants={ImageTag} src={home1} alt="gay with has camera" />
       </Image>
+      <Wave />
     </About>
   );
 };

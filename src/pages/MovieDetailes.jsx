@@ -2,7 +2,8 @@ import React, { useState, useEffect, Fragment } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { MovieState } from "../movieState";
-
+import { motion } from "framer-motion";
+import { pageAnimate } from "../Animate";
 const MovieDetailes = () => {
   const location = useLocation();
   const url = location.pathname;
@@ -15,9 +16,14 @@ const MovieDetailes = () => {
   }, [movies, url]);
 
   return (
-    <>
+    <Fragment>
       {movie && (
-        <Detailes>
+        <Detailes
+          exit="exit"
+          variants={pageAnimate}
+          initial="hidden"
+          animate="show"
+        >
           <Hading>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="check" />
@@ -36,11 +42,11 @@ const MovieDetailes = () => {
           </ImageAwards>
         </Detailes>
       )}
-    </>
+    </Fragment>
   );
 };
 
-const Detailes = styled.div`
+const Detailes = styled(motion.div)`
   color: white;
 `;
 const Hading = styled.div`
