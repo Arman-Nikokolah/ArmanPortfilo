@@ -66,12 +66,12 @@ const Movie = styled.div`
 
   .line {
     margin-bottom: 3rem;
-    background-color: #5ee6cf;
+    background-color: white;
     height: 0.3rem;
   }
 
   h2 {
-    color: #5ee6cf;
+    color: white;
     font-size: 2rem;
     padding-bottom: 2rem;
   }
