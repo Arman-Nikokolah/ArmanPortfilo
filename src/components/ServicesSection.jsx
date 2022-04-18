@@ -6,10 +6,27 @@ import diaphragm from "../img/diaphragm.svg";
 import mony from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import { About, Description, Image } from "../styles";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { ScrollAnimate } from "../Animate";
 
 const ServicesSection = () => {
+  const [element, view] = useInView({ threshold: 0.5 });
+  const controles = useAnimation();
+
+  if (view) {
+    controles.start("show");
+  } else {
+    controles.start("hidden");
+  }
+
   return (
-    <Services>
+    <Services
+      ref={element}
+      variants={ScrollAnimate}
+      animate={controles}
+      initial="hidden"
+    >
       <Description>
         <h2>
           High <span>quality</span> services

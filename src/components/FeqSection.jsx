@@ -53,6 +53,7 @@ const FeqSection = () => {
           </div>
         </Toggel>
       </AnimateSharedLayout>
+      <h5>@ Developed by Arman</h5>
     </Faq>
   );
 };

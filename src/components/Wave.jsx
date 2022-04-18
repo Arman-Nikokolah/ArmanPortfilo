@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 const Wave = () => {
   return (
-    <SvgAni
+    <SvgAnimate
       viewBox="0 0 1440 363"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -17,11 +17,11 @@ const Wave = () => {
         strokeOpacity="0.5"
         strokeWidth="10"
       />
-    </SvgAni>
+    </SvgAnimate>
   );
 };
 
-const SvgAni = styled.svg`
+const SvgAnimate = styled.svg`
   position: absolute;
   left: 0;
   z-index: 1;
