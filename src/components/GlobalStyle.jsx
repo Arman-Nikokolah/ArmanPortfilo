@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
 }
 
+html {
+    @media(max-width : 1700px) {
+        font-size: 75%;
+    }
+}
+
 body{
     background-color: #1b1b1b;
 }

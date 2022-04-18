@@ -53,7 +53,7 @@ const FeqSection = () => {
           </div>
         </Toggel>
       </AnimateSharedLayout>
-      <h5>@ Developed by Arman</h5>
+      <heading4>@ Developed by Arman Nikookolah</heading4>
     </Faq>
   );
 };
@@ -78,6 +78,11 @@ const Faq = styled(About)`
     height: 0.2rem;
     width: 100%;
   }
+`;
+
+const heading4 = styled.h4`
+  color: #fff;
+  font-size: large;
 `;
 
 export default FeqSection;

@@ -14,6 +14,8 @@ import {
 } from "../Animate";
 import { motion } from "framer-motion";
 
+import ScrollTop from "./../components/ScrollTop";
+
 const OurWorker = () => {
   return (
     <Work exit="exit" variants={pageAnimate} initial="hidden" animate="show">
@@ -46,6 +48,7 @@ const OurWorker = () => {
           <motion.img variants={ImageTag} src={goodtime} alt="athele" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
@@ -54,6 +57,9 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   padding: 5rem 5rem;
   overflow: hidden;
+  @media (max-width: 1300px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const Movie = styled.div`

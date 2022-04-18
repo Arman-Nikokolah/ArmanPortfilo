@@ -5,6 +5,8 @@ import { About, Description, Image, Hide } from "../styles";
 import { Tag, Tagp, ImageTag } from "../Animate";
 import Wave from "./Wave";
 import { Link } from "react-router-dom";
+import ScrollTop from "./ScrollTop";
+
 const AboutSection = () => {
   return (
     <About>
@@ -34,6 +36,7 @@ const AboutSection = () => {
         <motion.img variants={ImageTag} src={home1} alt="gay with has camera" />
       </Image>
       <Wave />
+      <ScrollTop />
     </About>
   );
 };
